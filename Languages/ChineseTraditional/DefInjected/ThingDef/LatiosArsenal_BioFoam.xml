@@ -2,6 +2,6 @@
 <LanguageData>
 
   <Latios_BiofoamInjector.label>生物泡沫注射器</Latios_BiofoamInjector.label>
-  <Latios_BiofoamInjector.description>掛在腰帶上的醫療注射器，核心是一罐能凝血的生物泡沫。當穿戴者的流血速度超過危險閾值時，它會自動放出一劑泡沫，以固定 75% 的包紮質量立刻封住最嚴重的那處出血傷口。藥罐可容納 4 次充能，每次觸發用掉一次；裝填需要小人走過去取用醫藥並花一點時間，一份醫藥補充兩次充能。</Latios_BiofoamInjector.description>
+  <Latios_BiofoamInjector.description>掛在腰帶上的醫療注射器，核心是一罐能凝血的生物泡沫。當穿戴者的流血速度超過危險閾值時，它會自動放出一劑泡沫，以固定 75% 的包紮質量立刻封住最嚴重的那處出血傷口。藥罐可容納 4 次充能，每次觸發用掉一次；1份醫藥補充兩次充能。</Latios_BiofoamInjector.description>
 
 </LanguageData>

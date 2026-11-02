@@ -4,27 +4,27 @@
   <!-- ==================== 武器 ==================== -->
 
   <Latios_BL66_Thermal.label>紧凑机械族热能弹发射器</Latios_BL66_Thermal.label>
-  <Latios_BL66_Thermal.description>使用回收机械族废料制作的无托式热能弹发射器，发射 66mm 热能弹，配有 6 发转轮弹舱，逐发装填弹药。\n因为将部分装药用作发射药降低了威力，但是武器弹道更平直，弹头飞行速度也更快。</Latios_BL66_Thermal.description>
+  <Latios_BL66_Thermal.description>使用回收机械族废料制作的无托式热能弹发射器，发射 66mm 热能弹，配有 6 发转轮弹舱，手动逐发装填弹药。\n因为将部分装药用作发射药降低了威力，但是武器弹道更平直，弹头飞行速度也更快。相对于重型肩扛式版本，使用高抛弹道时会受到额外的惩罚。</Latios_BL66_Thermal.description>
   <Latios_BL66_Thermal.tools.stock.label>枪托</Latios_BL66_Thermal.tools.stock.label>
   <Latios_BL66_Thermal.tools.barrel.label>枪管</Latios_BL66_Thermal.tools.barrel.label>
 
   <Latios_BL80_Fuel.label>紧凑机械族燃料弹发射器</Latios_BL80_Fuel.label>
-  <Latios_BL80_Fuel.description>使用回收机械族废料制作的无托式燃料弹发射器，发射 80x256mm 燃料弹，配有 3 发转轮弹舱，逐发装填弹药。\n相较于它的小兄弟，后坐力更大，射程更近。因为将部分装药用作发射药降低了威力，但是武器弹道更平直，弹头飞行速度也更快。</Latios_BL80_Fuel.description>
+  <Latios_BL80_Fuel.description>使用回收机械族废料制作的无托式燃料弹发射器，发射 80x256mm 燃料弹，配有 3 发转轮弹舱，手动逐发装填弹药。\n因为将部分装药用作发射药降低了威力，但是武器弹道更平直，弹头飞行速度也更快。相对于重型肩扛式版本，使用高抛弹道时会受到额外的惩罚。</Latios_BL80_Fuel.description>
   <Latios_BL80_Fuel.tools.stock.label>枪托</Latios_BL80_Fuel.tools.stock.label>
   <Latios_BL80_Fuel.tools.barrel.label>枪管</Latios_BL80_Fuel.tools.barrel.label>
 
   <Latios_HL66_Thermal.label>肩扛式机械族热能弹发射器</Latios_HL66_Thermal.label>
-  <Latios_HL66_Thermal.description>使用回收机械族废料制作的肩扛式热能弹发射器，发射 66mm 热能弹，配有 6 发可更换转轮弹舱。\n相较于无托版本，更长的炮管增加了重量与体积，但是提高了射程与精度。因为将部分装药用作发射药降低了威力，但是武器弹道更平直，弹头飞行速度也更快。</Latios_HL66_Thermal.description>
+  <Latios_HL66_Thermal.description>使用回收机械族废料制作的肩扛式热能弹发射器，发射 66mm 热能弹，配有 6 发可更换转轮弹舱。\n因为将部分装药用作发射药降低了威力，但是武器弹道更平直，弹头飞行速度也更快。相较于无托版本，更长的炮管增加了重量与体积，但是提高了射程与精度。</Latios_HL66_Thermal.description>
   <Latios_HL66_Thermal.tools.stock.label>枪托</Latios_HL66_Thermal.tools.stock.label>
   <Latios_HL66_Thermal.tools.barrel.label>枪管</Latios_HL66_Thermal.tools.barrel.label>
 
   <Latios_HL80_Fuel.label>肩扛式机械族燃料弹发射器</Latios_HL80_Fuel.label>
-  <Latios_HL80_Fuel.description>使用回收机械族废料制作的肩扛式燃料弹发射器，发射 80x256mm 燃料弹，配有 3 发可更换转轮弹舱。\n相较于无托版本，更长的炮管增加了重量与体积，但是提高了射程与精度。因为将部分装药用作发射药降低了威力，但是武器弹道更平直，弹头飞行速度也更快。</Latios_HL80_Fuel.description>
+  <Latios_HL80_Fuel.description>使用回收机械族废料制作的肩扛式燃料弹发射器，发射 80x256mm 燃料弹，配有 3 发可更换转轮弹舱。\n因为将部分装药用作发射药降低了威力，但是武器弹道更平直，弹头飞行速度也更快。相较于无托版本，更长的炮管增加了重量与体积，但是提高了射程与精度。</Latios_HL80_Fuel.description>
   <Latios_HL80_Fuel.tools.stock.label>枪托</Latios_HL80_Fuel.tools.stock.label>
   <Latios_HL80_Fuel.tools.barrel.label>枪管</Latios_HL80_Fuel.tools.barrel.label>
 
   <Latios_HL164_Demo.label>肩扛式机械族爆破弹发射器</Latios_HL164_Demo.label>
-  <Latios_HL164_Demo.description>使用回收机械族废料制作的肩扛式爆破弹发射器，发射 164x284mm 爆破弹，配有 2 发可更换转轮弹舱。\n这是整套发射器里最重的一件：更长的炮管换来射程，代价是足以把小人的准头打偏的后坐力；命中后弹体碎裂成数次二次爆炸，足以拆开墙体和炮塔。</Latios_HL164_Demo.description>
+  <Latios_HL164_Demo.description>使用回收机械族废料制作的肩扛式爆破弹发射器，发射 164x284mm 爆破弹，配有 2 发可更换转轮弹舱。\n专业重型反建筑发射器，其发射的爆破弹能高效摧毁墙体与建筑物，但是对于小型单位效果一般。</Latios_HL164_Demo.description>
   <Latios_HL164_Demo.tools.stock.label>枪托</Latios_HL164_Demo.tools.stock.label>
   <Latios_HL164_Demo.tools.barrel.label>枪管</Latios_HL164_Demo.tools.barrel.label>
 

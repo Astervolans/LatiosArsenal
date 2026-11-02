@@ -2,12 +2,12 @@
 <LanguageData>
 
   <!-- ==================== 設定介面 ==================== -->
-  <LatiosArsenal_SettingsCategory>Latios' Arsenal（內容包）</LatiosArsenal_SettingsCategory>
+  <LatiosArsenal_SettingsCategory>拉帝歐斯軍械庫</LatiosArsenal_SettingsCategory>
   <LatiosArsenal_Settings_Header>內容包</LatiosArsenal_Settings_Header>
   <LatiosArsenal_Settings_RestartPending>已變更 —— 重新啟動遊戲後生效</LatiosArsenal_Settings_RestartPending>
   <LatiosArsenal_Settings_NotLoaded>本次執行未載入</LatiosArsenal_Settings_NotLoaded>
   <LatiosArsenal_Settings_Loaded>已載入</LatiosArsenal_Settings_Loaded>
-  <LatiosArsenal_Settings_RestartHint>內容包是否載入在 Def 載入之前就已決定，所以開關只在重新啟動遊戲後生效。關閉某個內容包後，下次載入包含其內容的存檔時，這些內容會被移除。</LatiosArsenal_Settings_RestartHint>
+  <LatiosArsenal_Settings_RestartHint>變更在重新啟動遊戲後生效。關閉某個內容包後，下次載入包含其內容的存檔時，這些內容會被移除。</LatiosArsenal_Settings_RestartHint>
   <LatiosArsenal_Settings_SaveHint>每份存檔都會記錄儲存時的內容包狀態；狀態變更後再載入該存檔，會在訊息列列出差異。</LatiosArsenal_Settings_SaveHint>
 
   <!-- ==================== 內容包 ==================== -->
@@ -19,10 +19,10 @@
   <!-- ==================== 生物泡沫注射器 ==================== -->
   <LatiosArsenal_Biofoam_Triggered>{0}：生物泡沫注射器封住了最嚴重的傷口（{1}），剩餘充能 {2}/{3}。</LatiosArsenal_Biofoam_Triggered>
   <LatiosArsenal_Biofoam_Recharge>補充生物泡沫（{0}/{1}）</LatiosArsenal_Biofoam_Recharge>
-  <LatiosArsenal_Biofoam_RechargeDesc>消耗 1 份醫藥，恢復 {0} 次充能。醫藥不在身上時，小人會先走過去取藥，再花一點時間裝填。</LatiosArsenal_Biofoam_RechargeDesc>
+  <LatiosArsenal_Biofoam_RechargeDesc>消耗 1 份醫藥，恢復 {0} 次充能。</LatiosArsenal_Biofoam_RechargeDesc>
   <LatiosArsenal_Biofoam_CannotStart>{0} 現在無法開始裝填生物泡沫注射器。</LatiosArsenal_Biofoam_CannotStart>
   <LatiosArsenal_Biofoam_Full>充能已滿。</LatiosArsenal_Biofoam_Full>
-  <LatiosArsenal_Biofoam_NoMedicine>身上和附近都沒有醫藥。</LatiosArsenal_Biofoam_NoMedicine>
+  <LatiosArsenal_Biofoam_NoMedicine>攜帶物品和附近庫存都沒有醫藥。</LatiosArsenal_Biofoam_NoMedicine>
   <LatiosArsenal_Biofoam_Charges>生物泡沫充能：{0}/{1}</LatiosArsenal_Biofoam_Charges>
 
   <!-- ==================== 存檔變更提示 ==================== -->

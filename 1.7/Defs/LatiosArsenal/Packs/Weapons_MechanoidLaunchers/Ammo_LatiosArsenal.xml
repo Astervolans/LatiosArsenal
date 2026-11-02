@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!--
 		Latios' Arsenal — 弹药集与弹头
@@ -271,7 +271,7 @@
       <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
       <ai_IsIncendiary>true</ai_IsIncendiary>
       <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
-      <spreadMult>1.2</spreadMult>
+      <spreadMult>1.5</spreadMult>
       <gravityFactor>10</gravityFactor>
     </projectile>
     <comps>
@@ -306,7 +306,7 @@
       <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
       <ai_IsIncendiary>true</ai_IsIncendiary>
       <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
-      <spreadMult>1.2</spreadMult>
+      <spreadMult>1.5</spreadMult>
       <gravityFactor>10</gravityFactor>
     </projectile>
     <comps>

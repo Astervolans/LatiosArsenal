@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!--
 		Latios' Arsenal — 机械族废料回收发射器
@@ -10,7 +10,8 @@
   <ThingDef ParentName="BaseHumanMakeableGun" MayRequire="Ludeon.RimWorld.Biotech">
     <defName>Latios_BL66_Thermal</defName>
     <label>compact mechanoid thermal launcher</label>
-    <description>A bullpup thermal launcher built from salvaged mechanoid parts. It feeds 66mm thermal bolts from a six-round rotary magazine, one bolt at a time. Part of each bolt's charge is burned as propellant instead of payload, so it hits a little softer than the mechanoid original, but the round flies flatter and faster.</description>
+    <description>A bullpup thermal launcher built from salvaged mechanoid parts. It feeds 66mm thermal bolts from a six-round rotary magazine, loaded by hand one bolt at a time.
+Part of each bolt's charge is burned as propellant instead of payload, so it hits a little softer than the mechanoid original, but the round flies flatter and faster. Compared to the heavy shoulder-fired pattern, its high-arc shots suffer an extra penalty.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Weapons/Latios/BL66</texPath>
@@ -87,12 +88,12 @@
         <aiAimMode>AimedShot</aiAimMode>
       </li>
       <li Class="LatiosArsenal.CompProperties_LobMode">
-        <warmupMultiplier>1.2</warmupMultiplier>
-        <cooldownMultiplier>1.2</cooldownMultiplier>
+        <warmupMultiplier>1.5</warmupMultiplier>
+        <cooldownMultiplier>1.5</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
-				<lobCircularMissBase>1</lobCircularMissBase>
-				<lobCircularMissPerTile>0.05</lobCircularMissPerTile>
-				<lobCircularMissMax>8</lobCircularMissMax>
+        <lobCircularMissBase>1</lobCircularMissBase>
+        <lobCircularMissPerTile>0.07</lobCircularMissPerTile>
+        <lobCircularMissMax>8</lobCircularMissMax>
       </li>
     </comps>
     <tools>
@@ -123,7 +124,8 @@
   <ThingDef ParentName="BaseHumanMakeableGun" MayRequire="Ludeon.RimWorld.Biotech">
     <defName>Latios_BL80_Fuel</defName>
     <label>compact mechanoid fuel launcher</label>
-    <description>A bullpup launcher feeding 80x256mm fuel cells from a three-round rotary magazine, one cell at a time. Compared to its smaller brother it kicks harder and reaches less far. Part of each cell's charge is burned as propellant instead of payload, so it hits a little softer than the mechanoid original, but the shell flies flatter and faster.</description>
+    <description>A bullpup launcher feeding 80x256mm fuel cells from a three-round rotary magazine, loaded by hand one cell at a time.
+Part of each cell's charge is burned as propellant instead of payload, so it hits a little softer than the mechanoid original, but the shell flies flatter and faster. Compared to the heavy shoulder-fired pattern, its high-arc shots suffer an extra penalty.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Weapons/Latios/BL80</texPath>
@@ -200,12 +202,12 @@
         <aiAimMode>AimedShot</aiAimMode>
       </li>
       <li Class="LatiosArsenal.CompProperties_LobMode">
-        <warmupMultiplier>1.2</warmupMultiplier>
-        <cooldownMultiplier>1.2</cooldownMultiplier>
+        <warmupMultiplier>1.5</warmupMultiplier>
+        <cooldownMultiplier>1.5</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
-				<lobCircularMissBase>1</lobCircularMissBase>
-				<lobCircularMissPerTile>0.05</lobCircularMissPerTile>
-				<lobCircularMissMax>8</lobCircularMissMax>
+        <lobCircularMissBase>1</lobCircularMissBase>
+        <lobCircularMissPerTile>0.07</lobCircularMissPerTile>
+        <lobCircularMissMax>8</lobCircularMissMax>
       </li>
     </comps>
     <tools>
@@ -236,7 +238,8 @@
   <ThingDef ParentName="BaseHumanMakeableGun" MayRequire="Ludeon.RimWorld.Biotech">
     <defName>Latios_HL66_Thermal</defName>
     <label>shouldered mechanoid thermal launcher</label>
-    <description>A shoulder-fired thermal launcher built on recycled mechanoid alloy, feeding 66mm thermal bolts from a six-round replaceable rotary magazine. Compared to the bullpup pattern the longer barrel adds weight and bulk, but buys range and accuracy. Part of each bolt's charge is burned as propellant, so it hits a little softer than the mechanoid original, but the round flies flatter and faster.</description>
+    <description>A shoulder-fired thermal launcher built on recycled mechanoid alloy, feeding 66mm thermal bolts from a six-round replaceable rotary magazine.
+Part of each bolt's charge is burned as propellant, so it hits a little softer than the mechanoid original, but the round flies flatter and faster. Compared to the bullpup pattern, the longer barrel adds weight and bulk, but buys range and accuracy.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Weapons/Latios/HL66</texPath>
@@ -317,9 +320,9 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
-				<lobCircularMissBase>1</lobCircularMissBase>
-				<lobCircularMissPerTile>0.05</lobCircularMissPerTile>
-				<lobCircularMissMax>8</lobCircularMissMax>
+        <lobCircularMissBase>1</lobCircularMissBase>
+        <lobCircularMissPerTile>0.05</lobCircularMissPerTile>
+        <lobCircularMissMax>8</lobCircularMissMax>
       </li>
     </comps>
     <tools>
@@ -350,7 +353,8 @@
   <ThingDef ParentName="BaseHumanMakeableGun" MayRequire="Ludeon.RimWorld.Biotech">
     <defName>Latios_HL80_Fuel</defName>
     <label>shouldered mechanoid fuel launcher</label>
-    <description>A shoulder-fired launcher for 80x256mm fuel cells, with a three-round replaceable rotary magazine loaded one cell at a time. The longer barrel and heavier rail add weight and bulk, but buy range and accuracy over the bullpup pattern. Part of each cell's charge is burned as propellant, so it hits a little softer than the mechanoid original, but the shell flies flatter and faster.</description>
+    <description>A shoulder-fired launcher for 80x256mm fuel cells, with a three-round replaceable rotary magazine.
+Part of each cell's charge is burned as propellant, so it hits a little softer than the mechanoid original, but the shell flies flatter and faster. Compared to the bullpup pattern, the longer barrel adds weight and bulk, but buys range and accuracy.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Weapons/Latios/HL80</texPath>
@@ -431,9 +435,9 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
-				<lobCircularMissBase>1</lobCircularMissBase>
-				<lobCircularMissPerTile>0.05</lobCircularMissPerTile>
-				<lobCircularMissMax>8</lobCircularMissMax>
+        <lobCircularMissBase>1</lobCircularMissBase>
+        <lobCircularMissPerTile>0.05</lobCircularMissPerTile>
+        <lobCircularMissMax>8</lobCircularMissMax>
       </li>
     </comps>
     <tools>
@@ -464,7 +468,8 @@
   <ThingDef ParentName="BaseHumanMakeableGun" MayRequire="Ludeon.RimWorld.Biotech">
     <defName>Latios_HL164_Demo</defName>
     <label>shouldered mechanoid demolition launcher</label>
-    <description>The heaviest piece in the pattern: a shoulder-fired siege launcher for the mechanoid 164x284mm demolition shell, fed from a two-round replaceable rotary magazine one shell at a time. The long barrel and reinforced rail buy range, but the recoil is enough to shift a colonist off aim. Each impact shatters into follow-up blasts that take walls and turrets apart.</description>
+    <description>A shoulder-fired demolition launcher for the mechanoid 164x284mm shell, fed from a two-round replaceable rotary magazine.
+A dedicated heavy siege weapon: its shells tear through walls and structures with ease, but they are of limited use against small targets.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Weapons/Latios/HL164</texPath>
@@ -545,9 +550,9 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
-				<lobCircularMissBase>1</lobCircularMissBase>
-				<lobCircularMissPerTile>0.05</lobCircularMissPerTile>
-				<lobCircularMissMax>8</lobCircularMissMax>
+        <lobCircularMissBase>1</lobCircularMissBase>
+        <lobCircularMissPerTile>0.05</lobCircularMissPerTile>
+        <lobCircularMissMax>8</lobCircularMissMax>
       </li>
     </comps>
     <tools>
