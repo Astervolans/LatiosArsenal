@@ -90,6 +90,7 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
+				<lobCircularMissRadius>3</lobCircularMissRadius>
       </li>
     </comps>
     <tools>
@@ -200,6 +201,7 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
+				<lobCircularMissRadius>3</lobCircularMissRadius>
       </li>
     </comps>
     <tools>
@@ -311,6 +313,7 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
+				<lobCircularMissRadius>3</lobCircularMissRadius>
       </li>
     </comps>
     <tools>
@@ -422,6 +425,7 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
+				<lobCircularMissRadius>3</lobCircularMissRadius>
       </li>
     </comps>
     <tools>
@@ -533,6 +537,7 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
+				<lobCircularMissRadius>3</lobCircularMissRadius>
       </li>
     </comps>
     <tools>

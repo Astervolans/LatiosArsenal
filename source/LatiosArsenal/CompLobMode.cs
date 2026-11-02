@@ -16,6 +16,9 @@ namespace LatiosArsenal
         /// <summary>高抛弹头后缀：普通弹头 defName + 该后缀 = 高抛弹头 defName。</summary>
         public string lobProjectileSuffix = "_Lob";
 
+        /// <summary>高抛模式的落点散布半径（格）：以目标为中心的圆形误差，径向与横向同量级。</summary>
+        public float lobCircularMissRadius = 3f;
+
         public CompProperties_LobMode()
         {
             compClass = typeof(CompLobMode);
