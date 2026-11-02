@@ -1,95 +1,39 @@
 [h1][b]Latios' Arsenal (拉帝欧斯的军械库)[/b][/h1]
 
-[b]Summary[/b]
-Two content packs for colonies that fight with salvaged mechanoid hardware: five launchers built out of machine wreckage, and a belt-mounted biofoam injector. Packs are switched on individually in the mod settings; a pack that is switched off is stripped before the game builds its content, so it never enters the running game.
+Two content packs for colonies that fight with salvaged mechanoid hardware: five launchers and a belt-mounted biofoam injector. Packs are switched on individually in the mod settings, and a disabled pack is stripped before the game reads its content, so it never loads.
 
-[h2][b]Content packs[/b][/h2]
+[b]Features[/b]
 [list]
-[*] [b]You choose what loads.[/b] Options, then Mod settings, then Latios' Arsenal. Each pack has its own switch. The decision has to happen before the game reads its content, so a change takes effect the next time the game starts, and the settings screen says when a restart is pending.
-[*] [b]Switched off means not loaded.[/b] A disabled pack's items, recipes and ammunition entries are removed before they exist, so they cost nothing at runtime and cannot show up in trades, quests or raids.
-[*] [b]Saves keep their own record.[/b] Every save stores which packs were active when it was written. Load it after changing the switches and the message log lists what was turned off or on.
+[*] The launchers come in the compact BL bullpup pattern and the heavier HL shoulder-fired pattern, feeding the mechanoid 66mm thermal bolt, 80x256mm fuel cell and 164x284mm demolition shell, so ammunition stripped from a battlefield fits them directly.
+[*] The bullpup guns are hand-loaded one round at a time, while the shoulder-fired guns swap the whole rotary magazine in one slower reload.
+[*] Every launcher can switch to a high-arc shot that clears walls and cover - slower, longer to aim and cycle, and landing inside a circle around the target cell, with a heavier penalty on the bullpup pattern - and its effective range is capped at what the shell can really reach, so a range boost cannot produce shots that fall short.
+[*] The bullpup pattern unlocks with basic mechtech and fabrication and the heavy pattern with high mechtech and fabrication, both built at the fabrication bench from steel, components and mechanoid slag.
+[*] The biofoam injector spends one of four charges to seal the worst bleeding wound at a fixed 75% dressing quality, refills two charges per medicine through a short job, and can be left to refill itself while the wearer is idle.
 [/list]
-
-[img]图片展示：模组设置里的两个内容包开关，分别对应武器与医疗内容[/img]
-
-[h2][b]Pack - weapons: mechanoid salvage launchers[/b][/h2]
-[list]
-[*] Five launchers cut from machine wreckage: the compact BL bullpup pattern and the heavier shoulder-fired HL pattern. BL-66 and HL-66 feed the 66mm thermal bolt, BL-80 and HL-80 feed the 80x256mm fuel cell, and HL-164 fires the 164x284mm demolition shell.
-[*] They use the mechanoid heavy ammunition itself, so rounds stripped off a battlefield fit straight into a launcher.
-[*] The bullpup guns are hand-loaded one round at a time: six in the 66mm, three in the 80mm. The shoulder-fired guns swap the whole rotary magazine instead: six, three or two rounds in a single, slower reload.
-[*] [b]High-arc fire.[/b] Every launcher can switch, per weapon, between flat fire and a mortar-style arc that clears walls and cover. The arcing shot flies slower, takes longer to aim and to cycle, and lands inside a circle around the cell you picked, so a far shot scatters in all directions instead of turning into a short or long miss. The compact bullpup guns pay more for it - 1.5x aim and cooldown, wider circle - than the shoulder-fired guns at 1.2x.
-[*] Effective range is capped at what the loaded shell can physically reach, so a range-boosting gene or implant cannot turn high-arc shots into rounds that fall short.
-[*] The bullpup pattern unlocks with basic mechtech and fabrication; the heavy pattern with high mechtech and fabrication. Both are built at the fabrication bench from steel, components and mechanoid slag.
-[/list]
-
-[img]图片展示：BL 与 HL 两把发射器的物品栏图标，以及高抛模式与直射模式的切换按钮[/img]
-
-[h2][b]Pack - medical: biofoam[/b][/h2]
-[list]
-[*] A belt-mounted biofoam injector. When the wearer starts bleeding out - one full unit of bleeding per day or more - it spends a charge and seals the worst bleeding wound immediately at a fixed 75% dressing quality, so the colonist stops losing blood while a doctor is still on the way.
-[*] Four charges to start with, one per trigger. Refilling is a job, not a button: the wearer walks to a unit of medicine, or pulls one out of their own pack, and spends a few seconds loading the canister for two charges back.
-[*] The check is driven by taking damage, with a slow backup check for other sources of bleeding, so a colony wearing these does not pay for a per-tick health scan.
-[*] Reloading can also be left to the wearer: while charges are not full, an idle colonist fetches medicine and refills the injector on their own. A green-check or red-cross button on the belt switches this off and on. A drafted, downed or mentally broken wearer will not go fetching medicine.
-[*] Crafted at the machining table once medicine production is researched.
-[/list]
-
-[img]图片展示：腰带上的生物泡沫注射器，以及充能数、补充按钮和自动装填开关[/img]
 
 [b]Compatibility[/b]
-Built for RimWorld 1.7. The weapons pack needs Combat Extended, because it uses Combat Extended ammunition and shooting behaviour. The mod's code needs Harmony. The weapon research lines use Biotech mechtech projects, so Biotech is required as well, and the mod should load after Combat Extended. Nothing in the base game or in Combat Extended is modified - the mod only adds its own content, textures, text and settings.
+Built for RimWorld 1.7, it requires Harmony, Combat Extended and Biotech, and should load after Combat Extended.
 
 [b]Credits[/b]
-The salvage-launcher line - both the design approach and the look of the guns - is inspired by Local's CE Mechscav guns. No assets from that mod were used, copied or stitched together, and no AI image-to-image processing was involved: every sprite and icon here was drawn for this mod. If you enjoy fighting with scavenged mechanoid hardware, the Local's CE series is well worth your time.
-Combat Extended supplies the ammunition, warhead behaviour and mechanoid weapon baselines the launchers are balanced against. Harmony provides the framework the mod's patches run on.
-
-[b]Development notes[/b]
-All art assets were made by the author. Every feature in this release was tested in an actual colony by the author. The mod was developed with DS v4.1 flash and DSH, and the build, deploy and automated test pipeline is based on RimDevTools (https://github.com/1264600905/RimDevTools).
+The launcher line, in design and in the look of the guns, is inspired by Local's CE Mechscav guns, with no assets reused, copied or stitched and no AI image-to-image work involved; all art was drawn for this mod, every feature was tested in an actual colony, and development used DS v4.1 flash with DSH on a pipeline based on RimDevTools (https://github.com/1264600905/RimDevTools).
 
 ------
 
 [h1][b]Latios' Arsenal (拉帝欧斯的军械库)[/b][/h1]
 
-[b]简介[/b]
-拉帝欧斯的军械库按“内容包”组织：一套用机械族废料拼装的发射器，和一套医疗生物泡沫装备，适合靠回收机械族装备打仗的殖民地。在模组设置里单独打开你需要的内容包——被关掉的内容包在游戏读取内容之前就被整段摘掉，根本不会进入运行中的游戏。
+拉帝欧斯的军械库包含两个内容包：用机械族废料拼装的五把发射器，以及一套腰带式生物泡沫注射器。内容包在模组设置里单独开关，关掉的内容包在游戏读取内容之前就被摘掉，不会进入运行中的游戏。
 
-[h2][b]内容包[/b][/h2]
+[b]内容[/b]
 [list]
-[*] [b]加载什么由你决定。[/b]选项 → 模组设置 → Latios' Arsenal。每个内容包一个开关。由于必须在游戏读取内容之前决定，开关改动会在下一次启动游戏时生效，设置界面会标明「已改动 —— 重启游戏后生效」。
-[*] [b]关掉就是没加载。[/b]被关闭内容包的物品、配方、弹药条目在生成之前就被移除，所以运行期零开销，也不会出现在交易、任务或袭击里。
-[*] [b]存档自己记录状态。[/b]每份存档都会记住保存时哪些内容包是开着的。改过开关之后再载入它，消息栏会列出被关闭或被开启的内容。
+[*] 发射器分紧凑的无托 BL 系列与更重的肩扛 HL 系列，直接使用机械族自用的 66mm 热能弹、80x256mm 燃料弹与 164x284mm 爆破弹，战场上捡到的弹药可以直接装填。
+[*] 无托型号手动逐发压弹，肩扛型号直接更换整个转轮弹舱，单次装填更慢。
+[*] 每把武器都能切换到高抛射击：弹道越过墙体与掩体，弹速更慢、瞄准与冷却更长，落点以目标格子为中心圆形散布（无托型号代价更重）；高抛的有效射程还会按弹头实际能打到的距离夹紧，射程加成不会让它变成打不到目标的空放。
+[*] 无托型在基础机械科技与精密装配后解锁，重型型需要高级机械科技与精密装配，均在精密装配台用钢铁、零部件与机械族残块制作。
+[*] 生物泡沫注射器有 4 次充能，流血速度超过阈值时以固定 75% 的包扎质量封住最严重的出血伤口，1 份医药经一段装填作业恢复 2 次充能，空闲时也可由穿戴者自行装填。
 [/list]
-
-[img]图片展示：模组设置里的两个内容包开关，分别对应武器与医疗内容[/img]
-
-[h2][b]内容包 - 武器：机械族回收发射器[/b][/h2]
-[list]
-[*] 五把用机械残骸拼装的发射器：紧凑的无托 BL 系列，和更重的肩扛 HL 系列。BL-66 与 HL-66 打 66mm 热能弹，BL-80 与 HL-80 打 80x256mm 燃料弹，HL-164 打 164x284mm 爆破弹。
-[*] 它们直接使用机械族自用的重型弹药，战场上捡到的炮弹可以直接塞进发射器。
-[*] 无托型号手动逐发压弹：66mm 六发、80mm 三发。肩扛型号直接更换整个转轮弹舱：六发、三发或两发一次装完，单次装填更慢。
-[*] [b]高抛射击。[/b]每把武器都能单独在直射与高抛之间切换。高抛弹道会越过墙体与掩体，弹头飞得更慢、瞄准与冷却更长，落点以你指定的格子为中心圆形散布——所以打远处时是各个方向都可能偏，而不是固定打短或打长。无托型号的代价更重：瞄准与冷却 ×1.5、散布圈更大；肩扛型号为 ×1.2。
-[*] 有效射程会被夹到该弹头实际能打到的距离，所以射程加成不会让高抛变成打不到目标的空放。
-[*] 无托型在基础机械科技与精密装配后解锁；重型型需要高级机械科技与精密装配。两者都在精密装配台制作，材料是钢铁、零部件和机械族残块。
-[/list]
-
-[img]图片展示：BL 与 HL 两把发射器的物品栏图标，以及高抛模式与直射模式的切换按钮[/img]
-
-[h2][b]内容包 - 医疗：生物泡沫[/b][/h2]
-[list]
-[*] 腰带式生物泡沫注射器。当穿戴者开始大量失血（每天一个完整单位以上的流血速度）时，它消耗一次充能，以固定 75% 的包扎质量立刻封住最严重的那处出血伤口——医生还在路上时，殖民者已经不再继续掉血。
-[*] 初始四格充能，一次触发用掉一格。补充充能是一个作业：小人会走到医药处，或直接取用自己的随身医药，花几秒装填药罐，换回两格充能。
-[*] 检测由「受伤」驱动，另有一条低频兜底检查覆盖其他失血来源，所以整支队伍都戴着它也不会产生逐 tick 的健康扫描开销。
-[*] 装填也可以交给穿戴者自行完成：充能不满时，空闲的殖民者会自己去取医药并把注射器补满；腰带上的绿勾/红叉按钮可以开关这个行为。征召中、倒地或精神崩溃的穿戴者不会去取药。
-[*] 研究出医药生产后，可在机械加工台制作。
-[/list]
-
-[img]图片展示：腰带上的生物泡沫注射器，以及充能数、补充按钮和自动装填开关[/img]
 
 [b]兼容性与前置[/b]
-面向 RimWorld 1.7。武器内容包需要 Combat Extended（使用它的弹药与射击行为），模组代码需要 Harmony；武器研究线使用 Biotech 的机械科技项目，因此也需要 Biotech，并且应排在 Combat Extended 之后加载。本模组不修改原版与 Combat Extended 的任何内容，只新增自己的内容、贴图、文本与设置项。
+面向 RimWorld 1.7，需要 Harmony、Combat Extended 与 Biotech，并应排在 Combat Extended 之后加载。
 
 [b]致谢[/b]
-「机械族回收发射器」这条武器线的设计思路与枪械外观风格参考了 Local's CE Mechscav guns。没有使用该模组的任何素材进行拼接或修改，也未使用人工智能图像到图像（i2i）处理：本模组的所有贴图与图标都是为本模组绘制的。喜欢用回收机械族装备作战的玩家，建议去试试 Local's CE 系列模组。
-Combat Extended 提供了弹药、弹头表现与机械族武器基准；Harmony 提供了本模组补丁所依赖的框架。
-
-[b]开发说明[/b]
-所有美术素材由作者制作；本次发布的全部功能均由作者在真实殖民地中充分测试。开发使用 DS v4.1 flash 与 DSH，构建、部署与自动化测试流程基于 RimDevTools（https://github.com/1264600905/RimDevTools）。
+武器线的设计思路与枪械外观风格参考 Local's CE Mechscav guns，未使用其素材拼接或修改，也未做人工智能图像到图像处理；所有美术素材由作者制作，全部功能经作者在真实殖民地充分测试，开发使用 DS v4.1 flash 与 DSH，流程基于 RimDevTools（https://github.com/1264600905/RimDevTools）。
