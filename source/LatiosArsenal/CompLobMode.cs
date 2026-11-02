@@ -96,14 +96,25 @@ namespace LatiosArsenal
             {
                 yield return gizmo;
             }
+            foreach (Gizmo gizmo in LobModeGizmos())
+            {
+                yield return gizmo;
+            }
+        }
 
-            Command_Action toggle = new Command_Action
+        /// <summary>
+        /// 模式切换按钮。装备状态下 RimWorld 不会调用武器组件的 CompGetGizmosExtra，
+        /// 所以 LobGizmoPatch 会在 Pawn.GetGizmos 上把这里产出的按钮拼回去。
+        /// </summary>
+        public IEnumerable<Gizmo> LobModeGizmos()
+        {
+            yield return new Command_Action
             {
                 defaultLabel = (lobMode ? "LatiosArsenal_LobMode_SwitchToDirect" : "LatiosArsenal_LobMode_SwitchToLob").Translate(),
                 defaultDesc = "LatiosArsenal_LobMode_Desc".Translate(),
+                icon = parent.def.uiIcon,
                 action = Toggle
             };
-            yield return toggle;
         }
 
         /// <summary>供 Harmony 补丁使用：从装备上取高抛模式组件。</summary>

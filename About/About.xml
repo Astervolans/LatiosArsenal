@@ -7,7 +7,7 @@
         <li>1.7</li>
     </supportedVersions>
     <packageId>UNSCLatios.LatiosArsenal</packageId>
-    <modVersion>1.4.2</modVersion>
+    <modVersion>1.4.3</modVersion>
     <modDependencies>
         <li>
             <packageId>brrainz.harmony</packageId>
