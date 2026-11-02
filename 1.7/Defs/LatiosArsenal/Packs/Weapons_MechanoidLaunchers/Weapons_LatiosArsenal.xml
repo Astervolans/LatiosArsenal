@@ -90,7 +90,9 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
-				<lobCircularMissRadius>3</lobCircularMissRadius>
+				<lobCircularMissBase>1</lobCircularMissBase>
+				<lobCircularMissPerTile>0.05</lobCircularMissPerTile>
+				<lobCircularMissMax>8</lobCircularMissMax>
       </li>
     </comps>
     <tools>
@@ -201,7 +203,9 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
-				<lobCircularMissRadius>3</lobCircularMissRadius>
+				<lobCircularMissBase>1</lobCircularMissBase>
+				<lobCircularMissPerTile>0.05</lobCircularMissPerTile>
+				<lobCircularMissMax>8</lobCircularMissMax>
       </li>
     </comps>
     <tools>
@@ -313,7 +317,9 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
-				<lobCircularMissRadius>3</lobCircularMissRadius>
+				<lobCircularMissBase>1</lobCircularMissBase>
+				<lobCircularMissPerTile>0.05</lobCircularMissPerTile>
+				<lobCircularMissMax>8</lobCircularMissMax>
       </li>
     </comps>
     <tools>
@@ -425,7 +431,9 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
-				<lobCircularMissRadius>3</lobCircularMissRadius>
+				<lobCircularMissBase>1</lobCircularMissBase>
+				<lobCircularMissPerTile>0.05</lobCircularMissPerTile>
+				<lobCircularMissMax>8</lobCircularMissMax>
       </li>
     </comps>
     <tools>
@@ -537,7 +545,9 @@
         <warmupMultiplier>1.2</warmupMultiplier>
         <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
-				<lobCircularMissRadius>3</lobCircularMissRadius>
+				<lobCircularMissBase>1</lobCircularMissBase>
+				<lobCircularMissPerTile>0.05</lobCircularMissPerTile>
+				<lobCircularMissMax>8</lobCircularMissMax>
       </li>
     </comps>
     <tools>

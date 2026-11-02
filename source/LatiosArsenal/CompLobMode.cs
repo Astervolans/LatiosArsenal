@@ -16,8 +16,14 @@ namespace LatiosArsenal
         /// <summary>高抛弹头后缀：普通弹头 defName + 该后缀 = 高抛弹头 defName。</summary>
         public string lobProjectileSuffix = "_Lob";
 
-        /// <summary>高抛模式的落点散布半径（格）：以目标为中心的圆形误差，径向与横向同量级。</summary>
-        public float lobCircularMissRadius = 3f;
+        /// <summary>高抛落点散布：固定部分（格）。</summary>
+        public float lobCircularMissBase = 1f;
+
+        /// <summary>高抛落点散布：每格射程增加的半径（格/格）。默认 0.05 ⇒ 46 格约 3.3 格。</summary>
+        public float lobCircularMissPerTile = 0.05f;
+
+        /// <summary>高抛落点散布上限（格）；≤0 表示不设上限。</summary>
+        public float lobCircularMissMax = 8f;
 
         public CompProperties_LobMode()
         {

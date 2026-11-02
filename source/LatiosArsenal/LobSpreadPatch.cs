@@ -83,7 +83,14 @@ namespace LatiosArsenal
             }
 
             float shotDist = (float)fieldShotDist.GetValue(__result);
-            float radius = Mathf.Max(0.1f, comp.Props.lobCircularMissRadius);
+
+            // 半径随射程线性增长：base + perTile × 距离，超过上限则截断
+            float radius = comp.Props.lobCircularMissBase + comp.Props.lobCircularMissPerTile * shotDist;
+            if (comp.Props.lobCircularMissMax > 0f)
+            {
+                radius = Mathf.Min(radius, comp.Props.lobCircularMissMax);
+            }
+            radius = Mathf.Max(0.1f, radius);
 
             // 角度误差清零，误差全部改成位置误差
             fieldSpread.SetValue(__result, 0f);

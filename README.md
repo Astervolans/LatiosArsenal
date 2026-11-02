@@ -32,7 +32,7 @@ RimWorld 1.7 的 **Combat Extended** 武器/医疗内容包式模组：用回收
 - 瞄准时间 ×1.2、冷却时间 ×1.2；
 - 实现方式：`CombatExtended.Verb_ShootCE.get_Projectile` 后置替换弹头、`Verb.WarmupTime` 后置乘倍数、`ThingComp.GetStatFactor` 处理冷却。
 - 落点散布：高抛模式把 CE 的 `distShift`（只沿距离方向的偏差，46 格目标会有约 ±18 格）换成目标处的圆形误差，
-  `lobCircularMissRadius`（默认 3 格）同时决定径向与横向偏差，落点呈以目标为中心的圆。
+  散布半径随距离线性增长（`lobCircularMissBase` 1 + `lobCircularMissPerTile` 0.05 × 距离，上限 8 格），径向与横向偏差同源，落点呈以目标为中心的圆。
 - 射程安全：`CombatExtended.Verb_LaunchProjectileCE.EffectiveRange` 后置把有效射程夹到当前弹头的弹道上限
   （BL-66 ≈ 70.8 格、HL-164 ≈ 91 格，其余更高），避免基因/植入物给的射程系数把高抛打成“打不到还刷 CE 警告”。
 
