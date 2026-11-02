@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!--
+		医疗 - 生物泡沫（第一部分）：生物泡沫注射器
+		腰带槽位装备；穿戴者流血速度超过阈值时，消耗 1 次充能立刻止住最严重的一处伤口。
+		充能：随身携带 / 附近 8 格内的医药，每份医药恢复 2 次充能。
+		触发逻辑见 source/LatiosArsenal/CompBiofoamInjector.cs。
+	-->
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Latios_BiofoamInjector</defName>
+		<label>biofoam injector</label>
+		<description>A belt-mounted medical injector built around a canister of clotting biofoam. When the wearer&apos;s bleeding passes a dangerous threshold, it discharges once to seal the worst bleeding wound instantly at a fixed 75% dressing quality. The canister holds four charges, each single-use; reloading takes a moment of work and one unit of medicine, which refills two charges.</description>
+		<techLevel>Spacer</techLevel>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+			<tags>
+				<li>BeltUtility</li>
+			</tags>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		</apparel>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Latios/BiofoamInjector</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<thingClass>Apparel</thingClass>
+		<tickerType>Normal</tickerType>
+		<thingCategories>
+			<li>ApparelUtility</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Armor</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Styleable" />
+			<li Class="LatiosArsenal.CompProperties_BiofoamInjector">
+				<maxCharges>4</maxCharges>
+				<chargesPerMedicine>2</chargesPerMedicine>
+				<bleedThreshold>1.0</bleedThreshold>
+				<fallbackCheckInterval>60</fallbackCheckInterval>
+				<tendQuality>0.75</tendQuality>
+				<reloadWorkTicks>240</reloadWorkTicks>
+			</li>
+		</comps>
+		<costList>
+			<Steel>25</Steel>
+			<MedicineIndustrial>2</MedicineIndustrial>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>MedicineProduction</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>TableMachining</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+			<displayPriority>290</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>0.4</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Beauty>-1</Beauty>
+			<Mass>1.2</Mass>
+			<WorkToMake>9000</WorkToMake>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<useHitPoints>True</useHitPoints>
+	</ThingDef>
+
+</Defs>

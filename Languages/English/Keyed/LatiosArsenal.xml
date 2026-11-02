@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- ==================== 设置界面 ==================== -->
+  <LatiosArsenal_SettingsCategory>Latios' Arsenal (content packs)</LatiosArsenal_SettingsCategory>
+  <LatiosArsenal_Settings_Header>Content packs</LatiosArsenal_Settings_Header>
+  <LatiosArsenal_Settings_RestartPending>Changed - restart RimWorld to apply</LatiosArsenal_Settings_RestartPending>
+  <LatiosArsenal_Settings_NotLoaded>Not loaded in this session</LatiosArsenal_Settings_NotLoaded>
+  <LatiosArsenal_Settings_Loaded>Loaded</LatiosArsenal_Settings_Loaded>
+  <LatiosArsenal_Settings_RestartHint>Content pack state is decided before defs load, so changes only apply after a restart. Disabling a pack removes its content from saves that contain it the next time those saves are loaded.</LatiosArsenal_Settings_RestartHint>
+  <LatiosArsenal_Settings_SaveHint>Each save keeps a snapshot of the packs it was saved with; loading it after a change reports the difference in the message log.</LatiosArsenal_Settings_SaveHint>
+
+  <!-- ==================== 内容包 ==================== -->
+  <LatiosArsenal.Pack.Weapons.Label>Weapons - mechanoid salvage launchers</LatiosArsenal.Pack.Weapons.Label>
+  <LatiosArsenal.Pack.Weapons.Description>Five bullpup and shoulder-fired launchers built from salvaged mechanoid parts, firing the same heavy ammunition the mechanoids use.</LatiosArsenal.Pack.Weapons.Description>
+  <LatiosArsenal.Pack.Medical.Label>Medical - biofoam</LatiosArsenal.Pack.Medical.Label>
+  <LatiosArsenal.Pack.Medical.Description>A belt-mounted biofoam injector that spends a charge to seal the worst bleeding wound once the wearer starts bleeding out.</LatiosArsenal.Pack.Medical.Description>
+
+  <!-- ==================== 生物泡沫注射器 ==================== -->
+  <LatiosArsenal_Biofoam_Triggered>{0}: biofoam injector sealed the worst wound ({1}). Charges left {2}/{3}.</LatiosArsenal_Biofoam_Triggered>
+  <LatiosArsenal_Biofoam_Recharge>Recharge biofoam ({0}/{1})</LatiosArsenal_Biofoam_Recharge>
+  <LatiosArsenal_Biofoam_RechargeDesc>Consume 1 medicine to restore {0} charges. If the medicine is not carried, the wearer walks to it first, then spends a moment reloading.</LatiosArsenal_Biofoam_RechargeDesc>
+  <LatiosArsenal_Biofoam_CannotStart>{0} cannot start reloading the biofoam injector right now.</LatiosArsenal_Biofoam_CannotStart>
+  <LatiosArsenal_Biofoam_Full>Charges are full.</LatiosArsenal_Biofoam_Full>
+  <LatiosArsenal_Biofoam_NoMedicine>No medicine carried or nearby.</LatiosArsenal_Biofoam_NoMedicine>
+  <LatiosArsenal_Biofoam_Charges>Biofoam charges: {0}/{1}</LatiosArsenal_Biofoam_Charges>
+
+  <!-- ==================== 存档变更提示 ==================== -->
+  <LatiosArsenal_PackChange_Disabled>Content pack(s) disabled since this save was created: {0}. Their content is no longer loaded.</LatiosArsenal_PackChange_Disabled>
+  <LatiosArsenal_PackChange_Enabled>Content pack(s) enabled since this save was created: {0}.</LatiosArsenal_PackChange_Enabled>
+
+  <!-- ==================== Lob mode ==================== -->
+  <LatiosArsenal_LobMode_On>Fire mode: lob (over obstacles)</LatiosArsenal_LobMode_On>
+  <LatiosArsenal_LobMode_Off>Fire mode: direct</LatiosArsenal_LobMode_Off>
+  <LatiosArsenal_LobMode_SwitchToLob>Switch to lob mode</LatiosArsenal_LobMode_SwitchToLob>
+  <LatiosArsenal_LobMode_SwitchToDirect>Switch to direct mode</LatiosArsenal_LobMode_SwitchToDirect>
+  <LatiosArsenal_LobMode_Desc>Lob mode: the shell arcs over obstacles. Muzzle velocity is lower, warmup and cooldown are multiplied by 1.5, and spread is multiplied by 1.5. Use it to hit targets behind walls and cover.</LatiosArsenal_LobMode_Desc>
+
+</LanguageData>

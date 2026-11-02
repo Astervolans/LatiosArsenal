@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- 生物泡沫注射器的装填作业：走取医药 → 花时间装填 → 消耗 1 份医药、+2 充能 -->
+	<JobDef>
+		<defName>Latios_ReloadBiofoamInjector</defName>
+		<driverClass>LatiosArsenal.JobDriver_ReloadBiofoamInjector</driverClass>
+		<reportString>reloading biofoam injector</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<playerInterruptible>true</playerInterruptible>
+		<suspendable>false</suspendable>
+	</JobDef>
+
+</Defs>

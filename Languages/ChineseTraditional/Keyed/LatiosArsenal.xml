@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- ==================== 設定介面 ==================== -->
+  <LatiosArsenal_SettingsCategory>Latios' Arsenal（內容包）</LatiosArsenal_SettingsCategory>
+  <LatiosArsenal_Settings_Header>內容包</LatiosArsenal_Settings_Header>
+  <LatiosArsenal_Settings_RestartPending>已變更 —— 重新啟動遊戲後生效</LatiosArsenal_Settings_RestartPending>
+  <LatiosArsenal_Settings_NotLoaded>本次執行未載入</LatiosArsenal_Settings_NotLoaded>
+  <LatiosArsenal_Settings_Loaded>已載入</LatiosArsenal_Settings_Loaded>
+  <LatiosArsenal_Settings_RestartHint>內容包是否載入在 Def 載入之前就已決定，所以開關只在重新啟動遊戲後生效。關閉某個內容包後，下次載入包含其內容的存檔時，這些內容會被移除。</LatiosArsenal_Settings_RestartHint>
+  <LatiosArsenal_Settings_SaveHint>每份存檔都會記錄儲存時的內容包狀態；狀態變更後再載入該存檔，會在訊息列列出差異。</LatiosArsenal_Settings_SaveHint>
+
+  <!-- ==================== 內容包 ==================== -->
+  <LatiosArsenal.Pack.Weapons.Label>武器 - 機械族回收發射器</LatiosArsenal.Pack.Weapons.Label>
+  <LatiosArsenal.Pack.Weapons.Description>用拆解機械族廢料拼裝的五把無托式/肩扛式發射器，發射機械族自用的重型彈藥。</LatiosArsenal.Pack.Weapons.Description>
+  <LatiosArsenal.Pack.Medical.Label>醫療 - 生物泡沫</LatiosArsenal.Pack.Medical.Label>
+  <LatiosArsenal.Pack.Medical.Description>腰帶式生物泡沫注射器：穿戴者開始大量失血時，消耗一次充能封住最嚴重的出血傷口。</LatiosArsenal.Pack.Medical.Description>
+
+  <!-- ==================== 生物泡沫注射器 ==================== -->
+  <LatiosArsenal_Biofoam_Triggered>{0}：生物泡沫注射器封住了最嚴重的傷口（{1}），剩餘充能 {2}/{3}。</LatiosArsenal_Biofoam_Triggered>
+  <LatiosArsenal_Biofoam_Recharge>補充生物泡沫（{0}/{1}）</LatiosArsenal_Biofoam_Recharge>
+  <LatiosArsenal_Biofoam_RechargeDesc>消耗 1 份醫藥，恢復 {0} 次充能。醫藥不在身上時，小人會先走過去取藥，再花一點時間裝填。</LatiosArsenal_Biofoam_RechargeDesc>
+  <LatiosArsenal_Biofoam_CannotStart>{0} 現在無法開始裝填生物泡沫注射器。</LatiosArsenal_Biofoam_CannotStart>
+  <LatiosArsenal_Biofoam_Full>充能已滿。</LatiosArsenal_Biofoam_Full>
+  <LatiosArsenal_Biofoam_NoMedicine>身上和附近都沒有醫藥。</LatiosArsenal_Biofoam_NoMedicine>
+  <LatiosArsenal_Biofoam_Charges>生物泡沫充能：{0}/{1}</LatiosArsenal_Biofoam_Charges>
+
+  <!-- ==================== 存檔變更提示 ==================== -->
+  <LatiosArsenal_PackChange_Disabled>自這份存檔建立以來被關閉的內容包：{0}。其內容已不再載入。</LatiosArsenal_PackChange_Disabled>
+  <LatiosArsenal_PackChange_Enabled>自這份存檔建立以來被開啟的內容包：{0}。</LatiosArsenal_PackChange_Enabled>
+
+  <!-- ==================== 高拋模式 ==================== -->
+  <LatiosArsenal_LobMode_On>發射模式：高拋（越過障礙）</LatiosArsenal_LobMode_On>
+  <LatiosArsenal_LobMode_Off>發射模式：直射</LatiosArsenal_LobMode_Off>
+  <LatiosArsenal_LobMode_SwitchToLob>切換到高拋模式</LatiosArsenal_LobMode_SwitchToLob>
+  <LatiosArsenal_LobMode_SwitchToDirect>切換到直射模式</LatiosArsenal_LobMode_SwitchToDirect>
+  <LatiosArsenal_LobMode_Desc>高拋模式：彈道抬高以越過障礙物，彈頭速度降低，瞄準時間與冷卻時間 ×1.5，散布 ×1.5。適合越過牆體、掩體打擊後方目標。</LatiosArsenal_LobMode_Desc>
+
+</LanguageData>

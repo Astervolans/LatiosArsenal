@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!--
+		内容包开关：在 Def 实例化之前，把被关闭内容包的 XML 节点整段移除。
+		判定逻辑在 source/LatiosArsenal/PatchOperationContentPack.cs：
+		内容包启用时该操作是空操作；关闭时才删除节点。
+		新增内容包时，在下面追加同样格式的 Operation（一个 Operation 只写一条 xpath）。
+	-->
+
+	<!-- ==================== 武器 - 机械族回收发射器 ==================== -->
+
+	<Operation Class="LatiosArsenal.PatchOperationContentPack">
+		<pack>weapons_mechanoid_launchers</pack>
+		<xpath>Defs/ThingDef[defName="Latios_BL66_Thermal" or defName="Latios_BL80_Fuel" or defName="Latios_HL66_Thermal" or defName="Latios_HL80_Fuel" or defName="Latios_HL164_Demo"]</xpath>
+	</Operation>
+
+	<Operation Class="LatiosArsenal.PatchOperationContentPack">
+		<pack>weapons_mechanoid_launchers</pack>
+		<xpath>Defs/ThingDef[defName="Latios_Bullet_BL66_Thermal" or defName="Latios_Bullet_HL66_Thermal" or defName="Latios_Bullet_BL80_Fuel" or defName="Latios_Bullet_HL80_Fuel" or defName="Latios_Bullet_HL164_Demo" or defName="Latios_Bullet_BL66_Thermal_Lob" or defName="Latios_Bullet_HL66_Thermal_Lob" or defName="Latios_Bullet_BL80_Fuel_Lob" or defName="Latios_Bullet_HL80_Fuel_Lob" or defName="Latios_Bullet_HL164_Demo_Lob"]</xpath>
+	</Operation>
+
+	<Operation Class="LatiosArsenal.PatchOperationContentPack">
+		<pack>weapons_mechanoid_launchers</pack>
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="Latios_AmmoSet_BL66_Thermal" or defName="Latios_AmmoSet_HL66_Thermal" or defName="Latios_AmmoSet_BL80_Fuel" or defName="Latios_AmmoSet_HL80_Fuel" or defName="Latios_AmmoSet_HL164_Demo"]</xpath>
+	</Operation>
+
+	<!-- ==================== 医疗 - 生物泡沫 ==================== -->
+
+	<Operation Class="LatiosArsenal.PatchOperationContentPack">
+		<pack>medical_biofoam</pack>
+		<xpath>Defs/ThingDef[defName="Latios_BiofoamInjector"]</xpath>
+	</Operation>
+
+	<Operation Class="LatiosArsenal.PatchOperationContentPack">
+		<pack>medical_biofoam</pack>
+		<xpath>Defs/JobDef[defName="Latios_ReloadBiofoamInjector"]</xpath>
+	</Operation>
+
+</Patch>

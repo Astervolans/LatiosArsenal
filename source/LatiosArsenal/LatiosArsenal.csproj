@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- RimWorld 1.7+ (modern layout, .NET 10). Output goes to 1.7\Assemblies\, which deploy syncs. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>LatiosArsenal</AssemblyName>
+    <RootNamespace>LatiosArsenal</RootNamespace>
+    <OutputType>Library</OutputType>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <DebugType>none</DebugType>
+    <Deterministic>true</Deterministic>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- RimDevTools passes these on the command line; the fallbacks are for manual builds. -->
+    <RimWorldDir Condition="'$(RimWorldDir)' == ''"></RimWorldDir>
+    <RimWorldManagedDir Condition="'$(RimWorldManagedDir)' == '' and '$(RimWorldDir)' != ''">$(RimWorldDir)</RimWorldManagedDir>
+    <RimWorldAssemblyDir Condition="'$(RimWorldAssemblyDir)' == '' and '$(RimWorldManagedDir)' != ''">$(RimWorldManagedDir)</RimWorldAssemblyDir>
+    <HarmonyDllPath Condition="'$(HarmonyDllPath)' == ''"></HarmonyDllPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\1.7\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\1.7\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="**\*.cs" Exclude="obj\**;bin\**" />
+  </ItemGroup>
+  <!-- 1.7 game references: Unity-shaped types live in UnityStubs, a few engine-provided ones in Waylith. -->
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldAssemblyDir)\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>$(RimWorldManagedDir)\UnityStubs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Waylith">
+      <HintPath>$(RimWorldManagedDir)\Waylith.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDllPath)</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="ValidateRimWorldReferences" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="'$(RimWorldDir)' == ''" Text="RimWorldDir is required. Run RimDevTools deploy or pass -p:RimWorldDir=&lt;RimWorld installation&gt;." />
+    <Error Condition="'$(RimWorldAssemblyDir)' == '' or !Exists('$(RimWorldAssemblyDir)\Assembly-CSharp.dll')" Text="RimWorldAssemblyDir must point to the RimWorld 1.7+ game directory that contains Assembly-CSharp.dll." />
+    <Error Condition="'$(RimWorldManagedDir)' == '' or !Exists('$(RimWorldManagedDir)\UnityStubs.dll')" Text="RimWorldManagedDir must point to the RimWorld 1.7+ game directory that contains UnityStubs.dll." />
+    <Error Condition="'$(HarmonyDllPath)' == '' or !Exists('$(HarmonyDllPath)')" Text="HarmonyDllPath must point to the real 0Harmony.dll selected for RimWorld 1.7." />
+  </Target>
+</Project>

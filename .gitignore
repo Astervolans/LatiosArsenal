@@ -1,0 +1,23 @@
+# 本地工具与构建产物（不入库）
+.tools/
+.rimdev/
+
+# C# 构建输出
+source/**/obj/
+source/**/bin/
+*.pdb
+
+# 模组 DLL 由源码构建生成
+1.7/Assemblies/*.dll
+
+# IDE / 杂项
+.vs/
+*.user
+*.suo
+*.tmp
+*.cache
+*.log
+debug.log
+
+# 本机项目契约（含本机路径），仅保留示例
+mod_config.jsonc

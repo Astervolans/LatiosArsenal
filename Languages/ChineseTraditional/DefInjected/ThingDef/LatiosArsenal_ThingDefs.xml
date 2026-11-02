@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- ==================== 武器 ==================== -->
+
+  <Latios_BL66_Thermal.label>緊湊機械族熱能彈發射器</Latios_BL66_Thermal.label>
+  <Latios_BL66_Thermal.description>使用回收機械族廢料製作的無托式熱能彈發射器，發射 66mm 熱能彈，配有 6 發轉輪彈艙，逐發裝填彈藥。\n因為將部分裝藥用作發射藥降低了威力，但是武器彈道更平直，彈頭飛行速度也更快。</Latios_BL66_Thermal.description>
+  <Latios_BL66_Thermal.tools.stock.label>槍托</Latios_BL66_Thermal.tools.stock.label>
+  <Latios_BL66_Thermal.tools.barrel.label>槍管</Latios_BL66_Thermal.tools.barrel.label>
+
+  <Latios_BL80_Fuel.label>緊湊機械族燃料彈發射器</Latios_BL80_Fuel.label>
+  <Latios_BL80_Fuel.description>使用回收機械族廢料製作的無托式燃料彈發射器，發射 80x256mm 燃料彈，配有 3 發轉輪彈艙，逐發裝填彈藥。\n相較於它的小兄弟，後坐力更大，射程更近。因為將部分裝藥用作發射藥降低了威力，但是武器彈道更平直，彈頭飛行速度也更快。</Latios_BL80_Fuel.description>
+  <Latios_BL80_Fuel.tools.stock.label>槍托</Latios_BL80_Fuel.tools.stock.label>
+  <Latios_BL80_Fuel.tools.barrel.label>槍管</Latios_BL80_Fuel.tools.barrel.label>
+
+  <Latios_HL66_Thermal.label>肩扛式機械族熱能彈發射器</Latios_HL66_Thermal.label>
+  <Latios_HL66_Thermal.description>使用回收機械族廢料製作的肩扛式熱能彈發射器，發射 66mm 熱能彈，配有 6 發可更換轉輪彈艙。\n相較於無托版本，更長的炮管增加了重量與體積，但是提高了射程與精度。因為將部分裝藥用作發射藥降低了威力，但是武器彈道更平直，彈頭飛行速度也更快。</Latios_HL66_Thermal.description>
+  <Latios_HL66_Thermal.tools.stock.label>槍托</Latios_HL66_Thermal.tools.stock.label>
+  <Latios_HL66_Thermal.tools.barrel.label>槍管</Latios_HL66_Thermal.tools.barrel.label>
+
+  <Latios_HL80_Fuel.label>肩扛式機械族燃料彈發射器</Latios_HL80_Fuel.label>
+  <Latios_HL80_Fuel.description>使用回收機械族廢料製作的肩扛式燃料彈發射器，發射 80x256mm 燃料彈，配有 3 發可更換轉輪彈艙。\n相較於無托版本，更長的炮管增加了重量與體積，但是提高了射程與精度。因為將部分裝藥用作發射藥降低了威力，但是武器彈道更平直，彈頭飛行速度也更快。</Latios_HL80_Fuel.description>
+  <Latios_HL80_Fuel.tools.stock.label>槍托</Latios_HL80_Fuel.tools.stock.label>
+  <Latios_HL80_Fuel.tools.barrel.label>槍管</Latios_HL80_Fuel.tools.barrel.label>
+
+  <Latios_HL164_Demo.label>肩扛式機械族爆破彈發射器</Latios_HL164_Demo.label>
+  <Latios_HL164_Demo.description>使用回收機械族廢料製作的肩扛式爆破彈發射器，發射 164x284mm 爆破彈，配有 2 發可更換轉輪彈艙。\n這是整套發射器裡最重的一件：更長的炮管換來射程，代價是足以把小人的準頭打偏的後坐力；命中後彈體碎裂成數次二次爆炸，足以拆開牆體和炮塔。</Latios_HL164_Demo.description>
+  <Latios_HL164_Demo.tools.stock.label>槍托</Latios_HL164_Demo.tools.stock.label>
+  <Latios_HL164_Demo.tools.barrel.label>槍管</Latios_HL164_Demo.tools.barrel.label>
+
+  <!-- ==================== 彈頭 ==================== -->
+
+  <Latios_Bullet_BL66_Thermal.label>66mm 熱能彈</Latios_Bullet_BL66_Thermal.label>
+  <Latios_Bullet_HL66_Thermal.label>66mm 熱能彈</Latios_Bullet_HL66_Thermal.label>
+  <Latios_Bullet_BL80_Fuel.label>80x256mm 燃料彈</Latios_Bullet_BL80_Fuel.label>
+  <Latios_Bullet_HL80_Fuel.label>80x256mm 燃料彈</Latios_Bullet_HL80_Fuel.label>
+  <Latios_Bullet_HL164_Demo.label>164x284mm 爆破彈</Latios_Bullet_HL164_Demo.label>
+
+  <!-- ==================== 引用的 CE 機械族彈藥（確保中文顯示） ==================== -->
+  <Ammo_66mmThermalBolt_Incendiary.label>66mm 熱能彈 (燃燒彈)</Ammo_66mmThermalBolt_Incendiary.label>
+  <Ammo_80x256mmFuel_Incendiary.label>80x256mm 燃料彈 (燃燒彈)</Ammo_80x256mmFuel_Incendiary.label>
+  <Ammo_164x284mmDemo.label>164x284mm 爆破彈</Ammo_164x284mmDemo.label>
+
+  <!-- ==================== 高拋彈頭 ==================== -->
+  <Latios_Bullet_BL66_Thermal_Lob.label>66mm 熱能彈（高拋）</Latios_Bullet_BL66_Thermal_Lob.label>
+  <Latios_Bullet_HL66_Thermal_Lob.label>66mm 熱能彈（高拋）</Latios_Bullet_HL66_Thermal_Lob.label>
+  <Latios_Bullet_BL80_Fuel_Lob.label>80x256mm 燃料彈（高拋）</Latios_Bullet_BL80_Fuel_Lob.label>
+  <Latios_Bullet_HL80_Fuel_Lob.label>80x256mm 燃料彈（高拋）</Latios_Bullet_HL80_Fuel_Lob.label>
+  <Latios_Bullet_HL164_Demo_Lob.label>164x284mm 爆破彈（高拋）</Latios_Bullet_HL164_Demo_Lob.label>
+
+</LanguageData>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Latios_AmmoSet_BL66_Thermal.label>66mm 热能弹</Latios_AmmoSet_BL66_Thermal.label>
+  <Latios_AmmoSet_HL66_Thermal.label>66mm 热能弹</Latios_AmmoSet_HL66_Thermal.label>
+  <Latios_AmmoSet_BL80_Fuel.label>80x256mm 燃料弹</Latios_AmmoSet_BL80_Fuel.label>
+  <Latios_AmmoSet_HL80_Fuel.label>80x256mm 燃料弹</Latios_AmmoSet_HL80_Fuel.label>
+  <Latios_AmmoSet_HL164_Demo.label>164x284mm 爆破弹</Latios_AmmoSet_HL164_Demo.label>
+
+</LanguageData>
