@@ -30,10 +30,15 @@
   <LatiosArsenal_PackChange_Enabled>Content pack(s) enabled since this save was created: {0}.</LatiosArsenal_PackChange_Enabled>
 
   <!-- ==================== Lob mode ==================== -->
-  <LatiosArsenal_LobMode_On>Fire mode: lob (over obstacles)</LatiosArsenal_LobMode_On>
+  <LatiosArsenal_LobMode_On>Fire mode: lob</LatiosArsenal_LobMode_On>
   <LatiosArsenal_LobMode_Off>Fire mode: direct</LatiosArsenal_LobMode_Off>
   <LatiosArsenal_LobMode_SwitchToLob>Switch to lob mode</LatiosArsenal_LobMode_SwitchToLob>
   <LatiosArsenal_LobMode_SwitchToDirect>Switch to direct mode</LatiosArsenal_LobMode_SwitchToDirect>
-  <LatiosArsenal_LobMode_Desc>Lob mode: the shell arcs over obstacles. Muzzle velocity is lower, warmup and cooldown are multiplied by 1.5, and spread is multiplied by 1.5. Use it to hit targets behind walls and cover.</LatiosArsenal_LobMode_Desc>
+  <LatiosArsenal_LobMode_Desc>Lob mode: the shell arcs over obstacles. Muzzle velocity is lower, warmup and cooldown are longer, and spread is wider. Use it to hit targets behind walls and cover.</LatiosArsenal_LobMode_Desc>
+
+  <!-- ==================== Biofoam auto reload ==================== -->
+  <LatiosArsenal_Biofoam_AutoReloadOn>Auto reload: on</LatiosArsenal_Biofoam_AutoReloadOn>
+  <LatiosArsenal_Biofoam_AutoReloadOff>Auto reload: off</LatiosArsenal_Biofoam_AutoReloadOff>
+  <LatiosArsenal_Biofoam_AutoReloadDesc>When enabled, the wearer fetches medicine and reloads the injector on their own whenever charges are not full. Drafted, downed or mentally broken wearers will not go fetching medicine.</LatiosArsenal_Biofoam_AutoReloadDesc>
 
 </LanguageData>

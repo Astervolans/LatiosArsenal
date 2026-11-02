@@ -58,6 +58,9 @@
 				<fallbackCheckInterval>60</fallbackCheckInterval>
 				<tendQuality>0.75</tendQuality>
 				<reloadWorkTicks>240</reloadWorkTicks>
+				<autoReloadCheckInterval>250</autoReloadCheckInterval>
+				<autoReloadRetryTicks>1500</autoReloadRetryTicks>
+				<autoReloadByDefault>true</autoReloadByDefault>
 			</li>
 		</comps>
 		<costList>

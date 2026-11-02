@@ -7,7 +7,7 @@
         <li>1.7</li>
     </supportedVersions>
     <packageId>UNSCLatios.LatiosArsenal</packageId>
-    <modVersion>1.4.3</modVersion>
+    <modVersion>1.5.0</modVersion>
     <modDependencies>
         <li>
             <packageId>brrainz.harmony</packageId>
@@ -54,6 +54,7 @@ Latios' Arsenal is organised into content packs: salvaged mechanoid launchers, a
 [*] A belt-mounted biofoam injector. When the wearer starts bleeding out - one full unit of bleeding per day or more - it spends a charge and seals the worst bleeding wound immediately at a fixed 75% dressing quality, so the colonist stops losing blood while a doctor is still on the way.
 [*] Four charges to start with, one per trigger. Refilling is a job, not a magic button: the wearer walks to a unit of medicine (or pulls it from their pack), spends a few seconds loading the canister, and gets two charges back.
 [*] The check is driven by taking damage, with a slow backup check for other sources of bleeding, so a colony wearing these does not pay for a per-tick health scan.
+[*] Reloading can also be left to the wearer: while charges are not full, an idle colonist fetches medicine and refills the injector on their own. A green-check / red-cross button on the belt switches this off and on.
 [*] Crafted at the machining table once medicine production is researched.
 [/list]
 
@@ -92,6 +93,7 @@ Combat Extended for the ammunition, warhead behaviour and mechanoid weapon basel
 [*] 腰带式生物泡沫注射器。当穿戴者开始大量失血（每天一个完整单位以上的流血速度）时，它消耗一次充能，以固定 75% 的包扎质量立刻封住最严重的那处出血伤口——医生还在路上时，殖民者已经不再继续掉血。
 [*] 初始四格充能，一次触发用掉一格。补充充能是一个作业而不是魔法按钮：小人会走到医药处（或直接取用随身携带的医药），花几秒装填药罐，换回两格充能。
 [*] 检测由「受伤」驱动，另有一条低频兜底检查覆盖其他失血来源，所以整支队伍都戴着它也不会产生逐 tick 的健康扫描开销。
+[*] 装填也可以交给穿戴者自行完成：充能不满时，空闲的殖民者会自己去取医药并把注射器补满；腰带装备上的绿勾/红叉按钮可以开关这个行为。
 [*] 研究出医药生产后，可在机械加工台制作。
 [/list]
 

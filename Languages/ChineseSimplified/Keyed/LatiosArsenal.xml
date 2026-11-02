@@ -30,10 +30,15 @@
   <LatiosArsenal_PackChange_Enabled>自这份存档创建以来被开启的内容包：{0}。</LatiosArsenal_PackChange_Enabled>
 
   <!-- ==================== 高抛模式 ==================== -->
-  <LatiosArsenal_LobMode_On>发射模式：高抛（越过障碍）</LatiosArsenal_LobMode_On>
+  <LatiosArsenal_LobMode_On>发射模式：高抛</LatiosArsenal_LobMode_On>
   <LatiosArsenal_LobMode_Off>发射模式：直射</LatiosArsenal_LobMode_Off>
   <LatiosArsenal_LobMode_SwitchToLob>切换到高抛模式</LatiosArsenal_LobMode_SwitchToLob>
   <LatiosArsenal_LobMode_SwitchToDirect>切换到直射模式</LatiosArsenal_LobMode_SwitchToDirect>
-  <LatiosArsenal_LobMode_Desc>高抛模式：弹道抬高以越过障碍物，弹头速度降低，瞄准时间与冷却时间 ×1.5，散布 ×1.5。适合越过墙体、掩体打击后方目标。</LatiosArsenal_LobMode_Desc>
+  <LatiosArsenal_LobMode_Desc>高抛模式：弹道抬高以越过障碍物，弹头速度降低，瞄准时间与冷却时间延长，散布增大。适合越过墙体、掩体打击后方目标。</LatiosArsenal_LobMode_Desc>
+
+  <!-- ==================== 生物泡沫自动装填 ==================== -->
+  <LatiosArsenal_Biofoam_AutoReloadOn>自动装填：已开启</LatiosArsenal_Biofoam_AutoReloadOn>
+  <LatiosArsenal_Biofoam_AutoReloadOff>自动装填：已关闭</LatiosArsenal_Biofoam_AutoReloadOff>
+  <LatiosArsenal_Biofoam_AutoReloadDesc>开启后，充能不满时穿戴者会自行去取医药并装填注射器（不影响手动装填按钮）。征召中、倒地或精神崩溃时不会去取药。</LatiosArsenal_Biofoam_AutoReloadDesc>
 
 </LanguageData>

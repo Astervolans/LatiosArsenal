@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!--
 		Latios' Arsenal — 机械族废料回收发射器
@@ -87,8 +87,8 @@
         <aiAimMode>AimedShot</aiAimMode>
       </li>
       <li Class="LatiosArsenal.CompProperties_LobMode">
-        <warmupMultiplier>1.5</warmupMultiplier>
-        <cooldownMultiplier>1.5</cooldownMultiplier>
+        <warmupMultiplier>1.2</warmupMultiplier>
+        <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
       </li>
     </comps>
@@ -197,8 +197,8 @@
         <aiAimMode>AimedShot</aiAimMode>
       </li>
       <li Class="LatiosArsenal.CompProperties_LobMode">
-        <warmupMultiplier>1.5</warmupMultiplier>
-        <cooldownMultiplier>1.5</cooldownMultiplier>
+        <warmupMultiplier>1.2</warmupMultiplier>
+        <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
       </li>
     </comps>
@@ -308,8 +308,8 @@
         <aiAimMode>AimedShot</aiAimMode>
       </li>
       <li Class="LatiosArsenal.CompProperties_LobMode">
-        <warmupMultiplier>1.5</warmupMultiplier>
-        <cooldownMultiplier>1.5</cooldownMultiplier>
+        <warmupMultiplier>1.2</warmupMultiplier>
+        <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
       </li>
     </comps>
@@ -419,8 +419,8 @@
         <aiAimMode>AimedShot</aiAimMode>
       </li>
       <li Class="LatiosArsenal.CompProperties_LobMode">
-        <warmupMultiplier>1.5</warmupMultiplier>
-        <cooldownMultiplier>1.5</cooldownMultiplier>
+        <warmupMultiplier>1.2</warmupMultiplier>
+        <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
       </li>
     </comps>
@@ -530,8 +530,8 @@
         <aiAimMode>AimedShot</aiAimMode>
       </li>
       <li Class="LatiosArsenal.CompProperties_LobMode">
-        <warmupMultiplier>1.5</warmupMultiplier>
-        <cooldownMultiplier>1.5</cooldownMultiplier>
+        <warmupMultiplier>1.2</warmupMultiplier>
+        <cooldownMultiplier>1.2</cooldownMultiplier>
         <lobProjectileSuffix>_Lob</lobProjectileSuffix>
       </li>
     </comps>

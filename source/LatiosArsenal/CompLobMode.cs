@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace LatiosArsenal
@@ -7,10 +8,10 @@ namespace LatiosArsenal
     public class CompProperties_LobMode : CompProperties
     {
         /// <summary>高抛模式下的瞄准时间倍数。</summary>
-        public float warmupMultiplier = 1.5f;
+        public float warmupMultiplier = 1.2f;
 
         /// <summary>高抛模式下的冷却时间倍数（通过 GetStatFactor 作用于 RangedWeapon_Cooldown）。</summary>
-        public float cooldownMultiplier = 1.5f;
+        public float cooldownMultiplier = 1.2f;
 
         /// <summary>高抛弹头后缀：普通弹头 defName + 该后缀 = 高抛弹头 defName。</summary>
         public string lobProjectileSuffix = "_Lob";
@@ -112,7 +113,9 @@ namespace LatiosArsenal
             {
                 defaultLabel = (lobMode ? "LatiosArsenal_LobMode_SwitchToDirect" : "LatiosArsenal_LobMode_SwitchToLob").Translate(),
                 defaultDesc = "LatiosArsenal_LobMode_Desc".Translate(),
-                icon = parent.def.uiIcon,
+                // 高抛时按钮显示"切回直射"的图标，直射时显示"切到高抛"的图标
+                icon = ContentFinder<Texture2D>.Get(
+                    lobMode ? "UI/Icons/Latios/SwaptoDirect" : "UI/Icons/Latios/SwaptoLob", false),
                 action = Toggle
             };
         }

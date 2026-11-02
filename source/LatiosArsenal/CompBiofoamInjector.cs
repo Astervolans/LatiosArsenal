@@ -26,6 +26,15 @@ namespace LatiosArsenal
         /// <summary>装填作业的基础耗时（tick）。随身携带医药时同样要花这些时间。</summary>
         public int reloadWorkTicks = 240;
 
+        /// <summary>自动装填的检查间隔（tick）。0 = 关闭自动装填检查。</summary>
+        public int autoReloadCheckInterval = 250;
+
+        /// <summary>自动装填找不到医药/无法开始时的重试间隔（tick），避免每次检查都重复尝试。</summary>
+        public int autoReloadRetryTicks = 1500;
+
+        /// <summary>自动装填默认是否开启。</summary>
+        public bool autoReloadByDefault = true;
+
         public CompProperties_BiofoamInjector()
         {
             compClass = typeof(CompBiofoamInjector);
@@ -43,6 +52,9 @@ namespace LatiosArsenal
     {
         private int charges = -1;
         private int lastFallbackTick = -99999;
+        private int lastAutoReloadTick = -99999;
+        private int autoReloadRetryUntil;
+        private bool autoReload = true;
 
         public CompProperties_BiofoamInjector Props => (CompProperties_BiofoamInjector)props;
 
@@ -58,12 +70,21 @@ namespace LatiosArsenal
         {
             base.PostPostMake();
             charges = Props.maxCharges;
+            autoReload = Props.autoReloadByDefault;
+        }
+
+        public bool AutoReload => autoReload;
+
+        public void ToggleAutoReload()
+        {
+            autoReload = !autoReload;
         }
 
         public override void PostExposeData()
         {
             base.PostExposeData();
             Scribe_Values.Look(ref charges, "biofoamCharges", -1);
+            Scribe_Values.Look(ref autoReload, "biofoamAutoReload", Props.autoReloadByDefault);
             if (Scribe.mode == LoadSaveMode.PostLoadInit && charges < 0)
             {
                 charges = Props.maxCharges;
@@ -72,17 +93,57 @@ namespace LatiosArsenal
 
         public override void CompTick()
         {
-            if (Props.fallbackCheckInterval <= 0)
-            {
-                return;
-            }
             int ticks = Find.TickManager.TicksGame;
-            if (ticks - lastFallbackTick < Props.fallbackCheckInterval)
+
+            // 1) 止血兜底：低频读缓存的流血值
+            if (Props.fallbackCheckInterval > 0 && ticks - lastFallbackTick >= Props.fallbackCheckInterval)
+            {
+                lastFallbackTick = ticks;
+                TryTrigger(announce: false);
+            }
+
+            // 2) 自动装填：充能不满且允许自动装填时，自行去取医药装填
+            if (Props.autoReloadCheckInterval > 0
+                && autoReload
+                && !IsFull
+                && ticks - lastAutoReloadTick >= Props.autoReloadCheckInterval)
+            {
+                lastAutoReloadTick = ticks;
+                TryAutoReload(ticks);
+            }
+        }
+
+        /// <summary>
+        /// 自动装填：只在“空闲的玩家殖民地小人”身上触发，避免打断征召、精神崩溃或正在进行的作业。
+        /// 检查频率由 autoReloadCheckInterval 控制；找不到医药或无法开始时按 autoReloadRetryTicks 退避。
+        /// </summary>
+        private void TryAutoReload(int ticks)
+        {
+            if (ticks < autoReloadRetryUntil)
             {
                 return;
             }
-            lastFallbackTick = ticks;
-            TryTrigger(announce: false);
+            Pawn wearer = Wearer;
+            if (wearer == null || !wearer.Spawned || wearer.Dead || wearer.Downed || wearer.Drafted
+                || wearer.InMentalState || wearer.Faction != Faction.OfPlayer)
+            {
+                return;
+            }
+            JobDef reloadDef = LatiosJobDefs.ReloadBiofoamInjector;
+            if (reloadDef == null || wearer.CurJobDef == reloadDef)
+            {
+                return;
+            }
+            Thing medicine = FindMedicine(wearer);
+            if (medicine == null)
+            {
+                autoReloadRetryUntil = ticks + Props.autoReloadRetryTicks;
+                return;
+            }
+            if (!TryStartReloadJob(wearer, medicine))
+            {
+                autoReloadRetryUntil = ticks + Props.autoReloadRetryTicks;
+            }
         }
 
         /// <summary>
@@ -233,6 +294,7 @@ namespace LatiosArsenal
             {
                 defaultLabel = "LatiosArsenal_Biofoam_Recharge".Translate(Charges, Props.maxCharges),
                 defaultDesc = "LatiosArsenal_Biofoam_RechargeDesc".Translate(Props.chargesPerMedicine),
+                icon = ContentFinder<Texture2D>.Get("UI/Icons/Latios/ReloadBiofoamInjector", false),
                 action = StartReloadJob
             };
 
@@ -246,6 +308,17 @@ namespace LatiosArsenal
             }
 
             yield return command;
+
+            // 自动装填开关：绿勾 = 已开启，红叉 = 已关闭
+            yield return new Command_Action
+            {
+                defaultLabel = (autoReload
+                    ? "LatiosArsenal_Biofoam_AutoReloadOn".Translate()
+                    : "LatiosArsenal_Biofoam_AutoReloadOff".Translate()),
+                defaultDesc = "LatiosArsenal_Biofoam_AutoReloadDesc".Translate(),
+                icon = ContentFinder<Texture2D>.Get(autoReload ? "UI/Icons/Latios/AutoReloadOn" : "UI/Icons/Latios/AutoReloadOff", false),
+                action = ToggleAutoReload
+            };
         }
 
         public override string CompInspectStringExtra()
@@ -253,6 +326,7 @@ namespace LatiosArsenal
             return "LatiosArsenal_Biofoam_Charges".Translate(Charges, Props.maxCharges);
         }
 
+        /// <summary>手动装填按钮：找药并下达装填作业。</summary>
         private void StartReloadJob()
         {
             Pawn wearer = Wearer;
@@ -265,17 +339,27 @@ namespace LatiosArsenal
             {
                 return;
             }
-            JobDef jobDef = LatiosJobDefs.ReloadBiofoamInjector;
-            if (jobDef == null)
-            {
-                return;
-            }
-            Job job = JobMaker.MakeJob(jobDef, medicine, Belt);
-            job.count = 1;
-            if (!wearer.jobs.TryTakeOrderedJob(job, JobTag.Misc))
+            if (!TryStartReloadJob(wearer, medicine))
             {
                 Messages.Message("LatiosArsenal_Biofoam_CannotStart".Translate(wearer.LabelShort), wearer, MessageTypeDefOf.RejectInput, historical: false);
             }
+        }
+
+        /// <summary>下达装填作业（手动与自动装填共用）。</summary>
+        public bool TryStartReloadJob(Pawn wearer, Thing medicine)
+        {
+            if (wearer == null || medicine == null || IsFull)
+            {
+                return false;
+            }
+            JobDef jobDef = LatiosJobDefs.ReloadBiofoamInjector;
+            if (jobDef == null)
+            {
+                return false;
+            }
+            Job job = JobMaker.MakeJob(jobDef, medicine, Belt);
+            job.count = 1;
+            return wearer.jobs.TryTakeOrderedJob(job, JobTag.Misc);
         }
     }
 }

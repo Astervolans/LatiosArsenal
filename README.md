@@ -28,8 +28,8 @@ RimWorld 1.7 的 **Combat Extended** 武器/医疗内容包式模组：用回收
 
 五把武器各带一个「高抛」模式（武器 gizmo 切换）：
 
-- 弹头换成 `Latios_Bullet_*_Lob`：`flyOverhead=true`（CE 原生越障弹道）、速度 ×0.6、`spreadMult=1.5`、`gravityFactor=10`；
-- 瞄准时间 ×1.5、冷却时间 ×1.5；
+- 弹头换成 `Latios_Bullet_*_Lob`：`flyOverhead=true`（CE 原生越障弹道）、速度 ×0.6、`spreadMult=1.2`、`gravityFactor=10`；
+- 瞄准时间 ×1.2、冷却时间 ×1.2；
 - 实现方式：`CombatExtended.Verb_ShootCE.get_Projectile` 后置替换弹头、`Verb.WarmupTime` 后置乘倍数、`ThingComp.GetStatFactor` 处理冷却。
 - 射程安全：`CombatExtended.Verb_LaunchProjectileCE.EffectiveRange` 后置把有效射程夹到当前弹头的弹道上限
   （BL-66 ≈ 70.8 格、HL-164 ≈ 91 格，其余更高），避免基因/植入物给的射程系数把高抛打成“打不到还刷 CE 警告”。
@@ -41,6 +41,7 @@ RimWorld 1.7 的 **Combat Extended** 武器/医疗内容包式模组：用回收
 - 穿戴者流血速度超过 100% 时，消耗 1 次充能，以 **75%** 包扎质量立刻封住最严重的一处出血伤口；
 - 4 次充能；点「补充生物泡沫」会走一个装填作业（走到医药处或取用随身医药，耗时 4 秒），消耗 1 份医药恢复 2 次充能；
 - 检测由「受伤」事件驱动（Harmony postfix `Pawn.PostApplyDamage`），另有 60 tick 低频兜底，不做逐 tick 健康扫描；
+- 自动装填：充能不满时空闲的殖民者会自行取药装填（可用装备上的绿勾/红叉按钮开关；征召/倒地/精神崩溃时不触发）。
 - 制作：机械加工台，研究「医药生产」。
 
 ## 目录结构
