@@ -61,6 +61,13 @@ source\           C# 工程（net10.0）：设置、内容包补丁、生物泡�
 mod_config.example.jsonc   本地开发用配置模板（真实配置含本机路径，不入库）
 ```
 
+## 版本号
+
+`About/About.xml` 的 `modVersion` 采用「公开版本 (内部构建号)」：当前为 **0.0.1 (53)**。
+公开版本按语义化版本递增，括号内构建号每次构建/发布 +1；内部 1.x 记账已作废，公开线从 0.0.1 起算。
+
+发布物料在 `发布/`：`创意工坊介绍.bbcode`（与 `About.xml` 的 description 完全一致的 Steam 文案，英文 + `------` + 中文）
+和 `Steam创意工坊发布说明.md`（发布清单、版本策略、致谢口径）。
 ## 构建
 
 需要 .NET 10 SDK 与 RimWorld 1.7 安装目录（含 `Assembly-CSharp.dll`、`UnityStubs.dll`、`Waylith.dll`），
